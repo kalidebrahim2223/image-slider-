@@ -127,11 +127,11 @@ body{
 }
 @media only screen and (max-width:450px){
 	.slider,.slide img{
-	width: 400px;
+	width: 350px;
 	height: 500px;
     }
     .navigation-manul,.navigation-auto{
-    	width:400px;
+    	width:350px;
     }
     	
 }
