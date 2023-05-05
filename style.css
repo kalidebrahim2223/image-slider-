@@ -125,3 +125,13 @@ body{
 	animation: slideout 2s ease 1s both;
 	opacity: 1;
 }
+@media only screen and (max-width:450px){
+	.slider,.slide img{
+	width: 400px;
+	height: 500px;
+    }
+    .navigation-manul,.navigation-auto{
+    	width:400px;
+    }
+    	
+}
