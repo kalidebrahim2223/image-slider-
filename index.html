@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image slider</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="slider">
+		<div class="slides">
+			<input type="radio" name="radio-btn" id="radio1">
+			<input type="radio" name="radio-btn" id="radio2">
+			<input type="radio" name="radio-btn" id="radio3">
+			<input type="radio" name="radio-btn" id="radio4">
+			<div class="slide first">
+				<img src="amit.jpg">
+				<div class="text t1">
+					<h2>what are you wating</h2>
+					<span>home</span>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="alex-shuper.jpg">
+				 <div class="text t2">
+					<h2>what are you wating</h2>
+					<span>home</span>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="jaro.jpg">
+				<div class="text t3">
+					<h2>what are you wating</h2>
+					<span>home</span>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="pramod.jpg">
+				<div class="text t4">
+					<h2>what are you wating</h2>
+					<span>home</span>
+				</div>
+			</div>
+			<div class="navigation-auto" id="auto">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+				<div class="auto-btn4"></div>
+			</div>
+		</div>
+		<div class="navigation-manul" >
+			<label for="radio1" class="manual-btn"></label>
+			<label for="radio2" class="manual-btn"></label>
+			<label for="radio3" class="manual-btn"></label>
+			<label for="radio4" class="manual-btn"></label>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var c=1;
+		var x=1;
+		var mi=setInterval(rep,5000);
+		function rep(){
+			document.getElementById('radio'+c).checked=true;
+			if(x==4){
+				c-=2;
+				x--;
+				};
+				c++;
+				x++;
+				if(c==1){
+					x=1;
+				};
+			};
+		
+		document.querySelector('.navigation-manul').addEventListener('mouseover',()=>{
+			clearInterval(mi);
+		});
+		document.querySelector('.navigation-manul').addEventListener('mouseout',()=>{
+			mi=setInterval(rep,4000);
+		});
+        
+		console.log(x);
+		
+	</script>
+</body>
+</html>
